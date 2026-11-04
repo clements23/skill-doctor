@@ -1,0 +1,33 @@
+{
+  "name": "skill-doctor",
+  "version": "1.0.0",
+  "description": "Lint and audit SKILL.md files. Finds broken frontmatter, bloated prompts, missing files and quality issues in AI agent skills.",
+  "type": "module",
+  "bin": {
+    "skill-doctor": "src/cli.mjs"
+  },
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "claude-code",
+    "ai-skills",
+    "skill",
+    "skills",
+    "linter",
+    "audit",
+    "skilmd",
+    "prompt-quality",
+    "developer-tools",
+    "cli"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clements23/skill-doctor.git"
+  },
+  "homepage": "https://github.com/clements23/skill-doctor#readme"
+}
