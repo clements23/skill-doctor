@@ -1,7 +1,6 @@
 # skill-doctor: Lint and Audit SKILL.md Files for AI Agent Skills
 
-[![npm](https://img.shields.io/npm/v/skill-doctor?color=blue&label=skill-doctor)](https://www.npmjs.com/package/skill-doctor)
-[![node](https://img.shields.io/node/v/skill-doctor)](https://nodejs.org)
+[![GitHub stars](https://img.shields.io/github/stars/clements23/skill-doctor?style=flat&label=stars)](https://github.com/clements23/skill-doctor/stargazers)
 [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 `skill-doctor` is a zero-dependency linter for `SKILL.md` files, the packaging format used by Claude Code, Codex, Cursor and other AI agents. It catches the mistakes that keep a skill from loading, being selected by the agent, or behaving once loaded.
@@ -10,13 +9,13 @@ Broken skills fail silently: the agent either ignores the file or half-follows i
 
 ## Install
 
-Requires Node.js 18 or newer.
+Requires Node.js 18 or newer. No npm publish needed, it installs straight from GitHub:
 
 ```bash
-npm install -g skill-doctor
+npm install -g github:clements23/skill-doctor
 ```
 
-Or run ad hoc: `npx skill-doctor ./skills`
+Or run ad hoc: `npx -y github:clements23/skill-doctor ./skills`
 
 ## Usage
 
@@ -57,7 +56,7 @@ skill-doctor . --strict
 
 ```yaml
 - name: Lint skills
-  run: npx skill-doctor ./skills --strict
+  run: npx -y github:clements23/skill-doctor ./skills --strict
 ```
 
 Exit code is `1` when errors are found (or when `--strict` and any warning is found), so it drops straight into any pipeline.

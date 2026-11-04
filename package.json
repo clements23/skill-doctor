@@ -25,6 +25,7 @@
     "cli"
   ],
   "license": "MIT",
+  "author": "Clements Emerson Dewanto",
   "repository": {
     "type": "git",
     "url": "https://github.com/clements23/skill-doctor.git"
