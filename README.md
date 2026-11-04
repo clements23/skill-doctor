@@ -7,6 +7,8 @@
 
 Broken skills fail silently: the agent either ignores the file or half-follows it. `skill-doctor` turns that into a clear pass or fail before you publish.
 
+If skill-doctor catches a bug for you, [star the repo](https://github.com/clements23/skill-doctor/stargazers) so the next skill author finds it too.
+
 ## Install
 
 Requires Node.js 18 or newer. No npm publish needed, it installs straight from GitHub:
@@ -60,6 +62,20 @@ skill-doctor . --strict
 ```
 
 Exit code is `1` when errors are found (or when `--strict` and any warning is found), so it drops straight into any pipeline.
+
+## FAQ
+
+**Does skill-doctor modify my files?**
+No. It is read-only. It reports issues and exits with a status code.
+
+**Does it need network access?**
+No. Everything runs locally on your filesystem.
+
+**Which skill formats are supported?**
+Any `SKILL.md` with YAML frontmatter, the format used by Claude Code, Codex and Cursor.
+
+**Can I run it on every commit?**
+Yes, add `npx -y github:clements23/skill-doctor ./skills --strict` to your CI workflow.
 
 ## Related projects
 
